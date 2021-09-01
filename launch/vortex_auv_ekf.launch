@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+
+    <rosparam command="load" file="$(find robot_localization)/params/beluga_auv_ekf.yaml" />
+    <!--  Placeholder for output topic remapping
+    <remap from="odometry/filtered" to=""/>
+    <remap from="accel/filtered" to=""/>
+    -->
+    <node pkg="robot_localization" name="ekf_se" type="ekf_localization_node" output="screen"/>
+
+</launch>
