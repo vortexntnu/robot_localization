@@ -80,7 +80,7 @@ permit_corrected_publication: false
 
 odom_frame: odom            # Defaults to "odom" if unspecified
 base_link_frame: base_link  # Defaults to "base_link" if unspecified
-world_frame: odom           # Defaults to the value of odom_frame if unspecified
+world_frame: map           # Defaults to the value of odom_frame if unspecified
 
 # The filter accepts an arbitrary number of inputs from each input message type (nav_msgs/Odometry,
 # geometry_msgs/PoseWithCovarianceStamped, geometry_msgs/TwistWithCovarianceStamped,
@@ -170,7 +170,7 @@ twist0_twist_rejection_threshold: 0.2
 # # # ## Fusion AHRS
 pose0: uns/ahrs_pose
 pose0_config: [false, false, true,
-               true, true, true,
+               false, false, false,
                false, false, false,
                false, false, false,
                false, false, false]
