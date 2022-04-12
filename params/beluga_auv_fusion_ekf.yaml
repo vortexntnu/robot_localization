@@ -141,9 +141,9 @@ world_frame: odom           # Defaults to the value of odom_frame if unspecified
 ##  STIM300 
 imu0: imu/data_raw
 imu0_config: [false, false, false,
+              true, true, false,
               false, false, false,
-              false, false, false,
-              true, true, true,
+              false, false, true,
               true, true, true]
 imu0_nodelay: false
 imu0_differential: false
@@ -170,16 +170,30 @@ twist0_twist_rejection_threshold: 0.2
 # # # ## Fusion AHRS
 pose0: uns/ahrs_pose
 pose0_config: [false, false, true,
-               true, true, true,
+               false, false, false,
                false, false, false,
                false, false, false,
                false, false, false]
 pose0_differential: false
 pose0_relative: false
 pose0_queue_size: 5
+# #odom0_pose_rejection_threshold: 2
+# #odom0_twist_rejection_threshold: 0.2
+pose0_nodelay: false
+
+# # # ## Fusion z pos
+# pose1: uns/altitude
+# pose1_config: [false, false, true,
+#                false, false, false,
+#                false, false, false,
+#                false, false, false,
+#                false, false, false]
+# pose1_differential: false
+# pose1_relative: false
+# pose1_queue_size: 5
 #odom0_pose_rejection_threshold: 2
 #odom0_twist_rejection_threshold: 0.2
-pose0_nodelay: false
+# pose1_nodelay: false
 
 
 
