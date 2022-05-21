@@ -153,18 +153,18 @@ imu0_remove_gravitational_acceleration: true
 ############################################ DVL1000 ############################################ 
 
 # Further input parameter examples
-# odom0: /dvl/odom
-# odom0_config: [false, false, true,
-#                false, false, false,
-#                true, true, true,
-#                false, false, false,
-#                false, false, false]
-# odom0_differential: false
-# odom0_relative: false
-# odom0_queue_size: 10
-# #odom0_pose_rejection_threshold: 2
-# #odom0_twist_rejection_threshold: 0.2
-# odom0_nodelay: false
+odom0: /dvl/odom
+odom0_config: [false, false, true,
+               false, false, false,
+               true, true, true,
+               false, false, false,
+               false, false, false]
+odom0_differential: false
+odom0_relative: false
+odom0_queue_size: 10
+#odom0_pose_rejection_threshold: 2
+#odom0_twist_rejection_threshold: 0.2
+odom0_nodelay: false
 
 ############################################ DVL1000 No pressure ############################################ 
 # twist0: example/twist
