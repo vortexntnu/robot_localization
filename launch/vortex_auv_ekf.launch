@@ -1,14 +1,6 @@
 <?xml version="1.0"?>
 <launch>
-
-    <rosparam command="load" file="$(find robot_localization)/params/beluga_auv_ekf.yaml" />
-    <!-- <node pkg="tf2_ros" type="static_transform_publisher" name="base_link_to_imu0" args="0.029 0 -0.091 0 0 3.14159 base_link imu_0" /> -->
-    <node pkg="tf2_ros" type="static_transform_publisher" name="base_link_to_imu0" args="0.029 0 -0.091 -1.570795 0 0 base_link imu_0" />
-    <!-- <node pkg="tf2_ros" type="static_transform_publisher" name="base_link_to_DVL" args="0.015 0 0.075 3.14159 0 0 base_link dvl_link" />   -->
-    <node pkg="tf2_ros" type="static_transform_publisher" name="base_link_to_DVL" args="0.015 0 0.075 0 3.14159 0 base_link dvl_link" />  
-
     <!-- <remap from="odometry/filtered" to="odometry/ned"/> -->
-
+    <rosparam command="load" file="$(find robot_localization)/params/beluga_auv_ekf.yaml" />
     <node pkg="robot_localization" name="ekf_se" type="ekf_localization_node" output="screen"/>
-
 </launch>
